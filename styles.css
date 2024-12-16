@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c2828;
+}
+
+.container {
+    display: flex;
+    gap: 20px; /* Space between each container */
+    height: 125vh; /* Total container height */
+    padding: 20px; /* Optional: Add padding around the container */
+    justify-content: space-between; /* Ensures equal spacing between containers */
+    align-items: stretch; /* Make all child containers equal in height */
+}
+
+.editor-container {
+    display: flex;
+    flex: 1; /* Equal width for all editors */
+    flex-direction: column; /* Stack child elements vertically */
+    border: 1px solid #ddd; /* Optional: Add a border for better visibility */
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f5f1f1; /* Optional: Light background */
+}
+
+.editor {
+    flex: 1; /* Ensures equal height for all sections */
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+textarea {
+    flex: 1; /* Make the textarea take full space within the editor */
+    width: 100%; /* Full width */
+    border: none;
+    padding: 10px;
+    resize: none; /* Prevent resizing */
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    overflow-y: auto; /* Add vertical scrollbar */
+    overflow-x: auto; /* Add horizontal scrollbar */
+    background-color: #2c2828;
+    color: #ffffff;
+
+}
+
+/* Optional: Styling the scrollbars */
+textarea::-webkit-scrollbar {
+    width: 8px; /* Width of vertical scrollbar */
+    height: 8px; /* Height of horizontal scrollbar */
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* Scrollbar thumb color */
+    border-radius: 5px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #1e1414; /* Scrollbar track color */
+}
+
+.editor-container .editor:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6), 0 0 30px rgba(0, 123, 255, 0.4);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* .editor-container .editor h2:hover {
+    transform: scale(1.2);
+    color: #007bff;
+    transition: transform 0.3s ease, color 0.3s ease;
+} */
+
+/* 
+.editor {
+    flex: 1;
+    padding: 10px;
+    position: relative;
+} */
+
+.editor h2 {
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+/* textarea {
+    width: 97%;
+    height: calc(100% - 40px);
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
+    resize: none;
+    padding: 10px;
+    font-family: monospace;
+} */
+
+.preview-container {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#preview-frame {
+    width: 100%;
+    height: calc(100% - 40px);
+    border: none;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2c2c2c;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #2c2c2c;
+    border-bottom: 1px solid #444;
+}
+
+.autocomplete-items div:hover {
+    background-color: #444;
+}
+
+.autocomplete-active {
+    background-color: #0056b3 !important;
+    color: #ffffff;
+}
+

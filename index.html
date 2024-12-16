@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePen Clone with Autocomplete</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="editor-container">
+            <div class="editor" id="html-editor">
+                <h2>HTML</h2>
+                <img src="" alt="">
+                <textarea id="html-code"></textarea>
+                <datalist id="html-tags">
+                    <option value="<div>"></option>
+                    <option value="<p>"></option>
+                    <option value="<span>"></option>
+                    <option value="<a>"></option>
+                    <option value="<img>"></option>
+                    <option value="<ul>"></option>
+                    <option value="<li>"></option>
+                    <option value="<h1>"></option>
+                    <option value="<h2>"></option>
+                    <option value="<h3>"></option>
+                </datalist>
+            </div>
+
+            <!-- css-editor -->
+
+            <div class="editor" id="css-editor">
+                <h2>CSS</h2>
+                <textarea id="css-code"></textarea>
+            </div>
+            <div class="editor" id="js-editor">
+                <h2>JavaScript</h2>
+                <textarea id="js-code"></textarea>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h2>Preview</h2>
+            <iframe id="preview-frame"></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
